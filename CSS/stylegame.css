@@ -1,0 +1,193 @@
+body {
+    background-color: rgb(192,192,192);
+    font-family: 'Bodoni Moda', serif;
+    --def: #bb0000;
+    --inv: rgb(36, 0, 0);
+}
+.nav {
+    font-size:15px;
+    display: flex;
+    justify-content: center;
+}
+.text {
+    color:rgb(221, 255, 217);
+}
+nav a {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+  }
+div li {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+}
+li a {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    color: black;
+    font-size:20px;
+    margin-left: 5px;
+}
+a {		
+	position: relative;	
+	color: var(--inv);
+	text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	cursor: pointer;
+	user-select: none;
+}
+li a:before, li a:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+li a:hover {
+	color: var(--def);
+	transition-delay: .5s;
+}
+
+li a:hover:before {
+	transition-delay: 0s;
+}
+
+li a:hover:after {
+	background: var(--inv);
+	transition-delay: .35s;
+}
+li a:before {
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;
+}
+
+li a:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--inv);
+}
+
+li a:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+li a:hover:after {
+	top: 0;
+	height: 100%;
+}
+
+.txt {
+    font-family: 'Bodoni Moda', serif;
+
+    background-color: rgba(0, 35, 190, 0.74);
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 4px #000000;
+    color: gray;
+
+}
+.box {
+    display: inline;
+    text-align: center;
+    align-items: center;
+}
+.box li {
+    list-style: none;
+
+}
+.game {
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 50px;
+    
+}
+.dosbox-container {
+    justify-content: center;
+    width: 320px; 
+    height: 200px; 
+}
+.dosbox-container > .dosbox-overlay { 
+    background-image: url();
+    background-size: 320px;
+}
+.dosbox-overlay a { 
+    color: rgb(255, 255, 255); 
+}
+/*uit DOS.api genomen om custom waarden te geven*/
+.dosbox-start { 
+    text-align: center; 
+    position: absolute; 
+    left: 35%; 
+    right: 35%; 
+    bottom: 50%; 
+    font-size: 25px;
+    background-color: rgb(189, 0, 0);
+    text-align: center;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+    cursor: pointer; 
+} 
+.dosbox-start:hover {
+    background-color: green;
+}
+footer{
+    background-color: rgb(87, 20, 20);
+    color: gray;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+@media only screen and (min-width: 600px){
+    .txt{
+        background-color: rgba(0, 35, 190, 0.74);
+        border-radius: 15px;
+        color: yellowgreen;
+
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        box-shadow: 2px 2px 4px #000000;
+    }
+    .game{
+
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+        display: flex;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

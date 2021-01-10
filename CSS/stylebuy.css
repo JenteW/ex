@@ -1,0 +1,309 @@
+body {
+    background-color:rgb(192,192,192);
+    font-family: 'Bodoni Moda', serif;
+    --def: #bb0000;
+    --inv: rgb(36, 0, 0);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+nav ul {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+
+}
+/*topbar controlleert de stijl van de links*/
+.topbar a {
+    display: inline-block;
+    text-decoration: none;
+    list-style: none;
+    /*color: black;*/
+    font-size:20px;
+    margin-left: 5px;
+}
+/*Style used: https://codepen.io/perry_nt/pen/eVboze*/
+.topbar a {		
+	position: relative;	
+	color: var(--inv);
+	text-transform: uppercase;
+    transition: all 500ms cubic-bezier(0.77, 0, 0.175, 1);
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+	cursor: pointer;
+	user-select: none;
+}
+.topbar a:before, .topbar a:after {
+	content: '';
+	position: absolute;	
+	transition: inherit;
+	z-index: -1;
+}
+
+.topbar a:hover {
+	color: var(--def);
+	transition-delay: .5s;
+}
+
+.topbar a:hover:before {
+	transition-delay: 0s;
+}
+
+.topbar a:hover:after {
+	background: var(--inv);
+	transition-delay: .35s;
+}
+.topbar a:before {
+	top: 0;
+	left: 50%;
+	height: 100%;
+	width: 0;
+	border: 1px solid var(--inv);
+	border-left: 0;
+	border-right: 0;
+}
+
+.topbar a:after {
+	bottom: 0;
+	left: 0;
+	height: 0;
+	width: 100%;
+	background: var(--inv);
+}
+
+.topbar a:hover:before {
+	left: 0;
+	width: 100%;
+}
+
+.topbar a:hover:after {
+	top: 0;
+	height: 100%;
+}
+/*li a:hover{
+    color: rgb(146, 0, 0);
+}*/
+/*Box met formulier in*/
+.buy {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 35, 190, 0.74);
+    color: gray;
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 5px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    box-shadow: 2px 2px 4px #000000;
+}
+.pack{
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+.buy Div{
+    text-align: center;
+        color: yellowgreen;
+}
+.pw {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.Country {
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+/*controleert errors en pop-up messages*/
+.form__group.error label {
+    color: #ef494c;
+  }
+  
+.form__group span {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+}
+  
+.form__group.error span {
+    visibility: visible;
+}
+  
+.form__group.error input {
+    border-color: #ef494c;
+}
+/*input fields*/
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #222428;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+
+ input[type=submit] {
+    background-color: rgb(184, 0, 0);
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: all .5s;
+    border: none;
+}
+input[type=submit]:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.site {
+    margin: 0 auto;
+}
+footer{
+    background-color: rgb(87, 20, 20);
+    color: yellowgreen;;
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+}
+/*pop-up box na confirmatie*/
+.pop {
+    font-family: 'Bodoni Moda', serif;
+    background-color: rgba(0, 35, 190, 0.74);
+    border-radius: 15px;
+    margin: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: 2px 2px 4px #000000;
+    color: whitesmoke;
+}
+.hidden {
+    display: none;
+}
+.box {
+    display: inline;
+    text-align: center;
+    align-items: center;
+}
+.box li {
+    list-style: none;
+
+}
+footer{
+    background-color: rgb(87, 20, 20);
+    color: gray;
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    background-color:black;
+    font-size:15px;
+  }
+.links {
+        display: flex;
+        justify-content: center;
+      text-align: center;
+      text-transform: uppercase;
+      color: white;
+      list-style: none;
+      transition: all 0ms;
+      animation: ease-in;
+    
+  }
+.links a{
+    text-decoration: none;
+    font-size:20px;
+    margin-left: 5px;
+}
+.links a:hover {
+    color: rgb(0, 233, 0);
+}
+footer a {
+    color: white;
+}
+footer #logo {
+    display: flex;
+    justify-content: center;
+}
+footer #logo:hover {
+    filter: invert(2%);
+}
+footer .C {
+    display: flex;
+    justify-content: center;
+}
+#logo img{
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    width: 224px;
+    height: 71.12px;
+}
+.C {
+    list-style: none;
+}
+.table {
+    list-style: none;
+}
+/*niet mobile CSS*/
+@media only screen and (min-width: 600px){
+    .buy{
+        /*margin-left: 550px;
+        margin-right: 550px;*/
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+        background-position: 95% center;
+        background-size: 350px;
+        padding-bottom: 20px;
+    }
+    .buy .left {
+        width: 50%;
+    }
+    .pop{
+        background-color: rgba(0, 35, 190, 0.74);
+        border-radius: 15px;
+        /*margin-left: 550px;
+        margin-right: 550px;*/
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 850px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        box-shadow: 2px 2px 4px #000000;
+    }
+    footer{
+        background-color: rgb(87, 20, 20);
+        color: rgb(196, 194, 194);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+    }
+    
+}
